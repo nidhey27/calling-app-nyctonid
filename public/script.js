@@ -7,9 +7,12 @@ const myVideo = document.createElement("video");
 myVideo.muted = true;
 
 var peer = new Peer(undefined, {
+  headers: {
+    'Content-Type': 'application/octet-stream'
+  },
   path: "/peerjs",
   host: "/",
-  port: "3030",
+  port: 443,
 });
 
 let myVideoStream;

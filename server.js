@@ -32,5 +32,7 @@ io.on("connection", (socket) => {
     });
   });
 });
-
-server.listen(process.env.PORT || 3030);
+const _PORT = process.env.PORT || 3030;
+server.listen(_PORT, () => {
+    console.log(`Server is up and Running at PORT ${_PORT}`)
+});
